@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tangawisi Toulouse - Recette de Tonton Paul</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Patrick+Hand&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body
+    class="text-stone-800 antialiased p-4 md:p-8 min-h-screen flex flex-col items-center"
+  >
+    <main
+      class="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[90vh] mb-12"
+    >
+      <div
+        class="bento-item liquid-gloss md:col-span-2 bg-ginger-500 rounded-3xl p-8 flex flex-col justify-center relative text-white shadow-bento group"
+      >
+        <div
+          class="absolute top-0 right-0 w-48 h-48 bg-white opacity-10 rounded-full -mr-16 -mt-16 transform rotate-45 group-hover:scale-110 transition-transform duration-500 z-0"
+        ></div>
+
+        <div class="z-10 relative">
+          <h1
+            class="site-title font-titan text-stroke-title tracking-wider text-white"
+          >
+            TANGAWISI
+          </h1>
+          <div
+            class="inline-block bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full mt-4 shadow-sm transform -rotate-1"
+          >
+            <p
+              class="text-ginger-900 font-bold text-base md:text-xl uppercase tracking-widest"
+            >
+              L'Élixir Congolais de Toulouse
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bento-item md:col-span-1 bg-white rounded-3xl p-6 flex flex-col justify-center shadow-bento border border-stone-100 relative"
+      >
+        <div
+          class="absolute top-0 right-0 p-4 opacity-10 text-6xl text-ginger-300 font-titan"
+        >
+          60
+        </div>
+        <div class="flex items-center gap-4 mb-4 relative z-10">
+          <img
+            src="images/tonton-paul.jpg"
+            alt="Tonton Paul"
+            class="w-16 h-16 rounded-full object-cover border-2 border-ginger-500 shadow-sm"
+          />
+          <div>
+            <h3 class="font-bold text-xl leading-tight font-titan text-stone-800">
+              Tonton Paul
+            </h3>
+            <p
+              class="text-xs text-ginger-800 font-bold uppercase tracking-wider"
+            >
+              Inventeur de la recette
+            </p>
+          </div>
+        </div>
+        <p class="text-base text-stone-600 italic font-medium leading-relaxed">
+          "Au pays, le gingembre c'est la vie. J'ai créé cette recette pour
+          partager la force et la chaleur de nos racines."
+        </p>
+      </div>
+
+      <div
+        class="bento-item md:col-span-2 md:row-span-2 bg-white rounded-3xl p-0 shadow-bento border-2 border-ginger-500 flex flex-col relative overflow-hidden"
+      >
+        <div class="bg-ginger-500 p-4 flex justify-between items-center z-10 shrink-0">
+          <h3 class="text-white font-bold uppercase tracking-wider text-sm">
+            <i class="fas fa-shopping-basket mr-2"></i>Commander votre bouteille
+          </h3>
+          <span
+            class="bg-white/20 text-white text-[10px] md:text-xs px-3 py-1 rounded-full backdrop-blur-sm font-medium"
+            >Réserver la veille • Livré 12h-19h</span
+          >
+        </div>
+
+        <form
+          id="orderForm"
+          action="https://formspree.io/f/YOUR_ID_HERE"
+          method="POST"
+          class="p-8 grid grid-cols-1 md:grid-cols-2 gap-8 flex-grow overflow-y-auto z-10 bg-white"
+        >
+          <input
+            type="text"
+            name="_gotcha"
+            class="visually-hidden"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <div class="space-y-6">
+            <div>
+              <label
+                class="text-xs font-black text-ginger-900 uppercase mb-3 block tracking-wider"
+                >1. Format & Tarif</label
+              >
+              <div class="relative">
+                <i class="fas fa-bottle-water absolute left-4 top-3.5 text-gray-400"></i>
+                <select
+                  name="Format"
+                  class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl pl-11 pr-4 py-3 text-sm focus:outline-none focus:border-ginger-500 font-bold text-stone-700 appearance-none"
+                >
+                  <option value="50cl - 6€">Petite soif (50cl) - 6€</option>
+                  <option value="1L - 10€" selected>
+                    Grande soif (1L) - 10€
+                  </option>
+                  <option value="Pack 3L - 25€">Pack Famille (3L) - 25€</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label
+                class="text-xs font-black text-ginger-900 uppercase mb-3 block tracking-wider"
+                >2. Jour de livraison</label
+              >
+              <div class="relative">
+                <i class="fas fa-calendar absolute left-4 top-3.5 text-gray-400"></i>
+                <input
+                  type="date"
+                  name="Date_Livraison"
+                  class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl pl-11 pr-4 py-3 text-sm focus:outline-none focus:border-ginger-500 font-medium text-stone-700"
+                  required
+                />
+              </div>
+              <p class="text-[11px] text-ginger-600 mt-2 font-medium italic">
+                <i class="fas fa-info-circle mr-1"></i>Veuillez réserver au moins
+                24h à l'avance.
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-6 flex flex-col justify-between">
+            <div>
+              <label
+                class="text-xs font-black text-ginger-900 uppercase mb-3 block tracking-wider"
+                >3. Vos Coordonnées</label
+              >
+              <div class="space-y-4">
+                <div class="grid grid-cols-2 gap-3">
+                  <input
+                    type="text"
+                    name="Prenom"
+                    placeholder="Prénom"
+                    class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ginger-500 text-stone-700"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    name="Telephone"
+                    placeholder="Tél (06...)"
+                    class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ginger-500 text-stone-700"
+                    required
+                  />
+                </div>
+                <textarea
+                  name="Adresse_Message"
+                  placeholder="Adresse de livraison à Toulouse (Rue, étage, code...)"
+                  class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ginger-500 text-stone-700 h-24 resize-none"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                class="w-full bg-stone-900 text-white font-bold py-4 rounded-xl hover:bg-ginger-600 transition-all transform active:scale-95 flex justify-center items-center gap-3 text-lg shadow-xl"
+              >
+                <span>Commander</span>
+                <i class="fas fa-paper-plane text-sm"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div
+          id="successMessage"
+          class="absolute inset-0 bg-white flex flex-col justify-center items-center text-center p-8 hidden z-20"
+        >
+          <div
+            class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-600 text-3xl animate-bounce"
+          >
+            <i class="fas fa-check"></i>
+          </div>
+          <h4 class="text-3xl font-bold text-stone-800 mb-3 font-titan">
+            C'est validé !
+          </h4>
+          <p class="text-base text-gray-600 max-w-xs">
+            Japhet a bien reçu votre demande. Vous recevrez une confirmation par
+            SMS très bientôt.
+          </p>
+          <button
+            id="resetFormButton"
+            class="mt-8 text-sm text-ginger-600 font-bold hover:underline uppercase tracking-widest"
+          >
+            Nouvelle commande
+          </button>
+        </div>
+        <div
+          id="errorMessage"
+          class="absolute inset-0 bg-white flex flex-col justify-center items-center text-center p-8 hidden z-20"
+        >
+          <div
+            class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 text-red-600 text-3xl"
+          >
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <h4 class="text-2xl font-bold text-stone-800 mb-3 font-titan">
+            Oups...
+          </h4>
+          <p class="text-base text-gray-600 max-w-xs">
+            Une erreur s'est produite. Merci de réessayer ou de nous contacter sur
+            Instagram.
+          </p>
+          <button
+            id="errorDismissButton"
+            class="mt-8 text-sm text-ginger-600 font-bold hover:underline uppercase tracking-widest"
+          >
+            Retour
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="bento-item liquid-gloss md:col-span-1 md:row-span-2 bg-stone-900 rounded-3xl relative shadow-bento group overflow-hidden"
+      >
+        <img
+          src="images/tangawisi-bottle.jpg"
+          alt="Bouteille Tangawisi"
+          class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-1000 ease-out z-0"
+        />
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-8 z-10"
+        >
+          <div
+            class="mb-6 space-y-3 bg-black/40 backdrop-blur-md p-5 rounded-2xl border border-white/10 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform"
+          >
+            <div class="flex items-center text-white text-xs font-black tracking-widest uppercase">
+              <span class="bg-yellow-500/30 text-yellow-300 p-2 rounded-lg mr-4">
+                <i class="fas fa-bolt"></i>
+              </span>
+              COUP DE FOUET
+            </div>
+            <div class="h-px bg-white/10 w-full"></div>
+            <div class="flex items-center text-white text-xs font-black tracking-widest uppercase">
+              <span class="bg-red-500/30 text-red-300 p-2 rounded-lg mr-4">
+                <i class="fas fa-fire"></i>
+              </span>
+              SENSATIONS FORTES
+            </div>
+            <div class="h-px bg-white/10 w-full"></div>
+            <div class="flex items-center text-white text-xs font-black tracking-widest uppercase">
+              <span class="bg-orange-500/30 text-orange-300 p-2 rounded-lg mr-4">
+                <i class="fas fa-sun"></i>
+              </span>
+              CHALEUR NATURELLE
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-titan text-white mb-2 leading-tight drop-shadow-xl uppercase italic">
+            Ça pique.<br />Ça réveille.
+          </h2>
+        </div>
+      </div>
+
+      <div
+        class="bento-item md:col-span-3 bg-leaf-700 rounded-3xl p-6 text-white shadow-bento relative flex flex-col md:flex-row items-center justify-between gap-6"
+      >
+        <div class="absolute left-10 -bottom-12 text-leaf-800 opacity-30 z-0">
+          <i class="fas fa-bicycle text-9xl"></i>
+        </div>
+
+        <div class="z-10 relative flex items-center gap-5 pl-4 md:pl-10 w-full md:w-auto">
+          <div class="bg-white/20 p-4 rounded-full backdrop-blur-sm shrink-0">
+            <i class="fas fa-truck-fast text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-1">Livraison Toulouse</h3>
+            <p class="text-leaf-100 text-sm font-medium">
+              Tous les jours de 12h à 19h • Centre & proximité
+            </p>
+          </div>
+        </div>
+
+        <div class="hidden md:block w-px h-12 bg-leaf-500/50"></div>
+
+        <div class="z-10 relative flex items-center gap-4 pr-4 md:pr-10">
+          <a
+            href="https://instagram.com/tangawisi.toulouse"
+            target="_blank"
+            rel="noreferrer"
+            class="flex items-center gap-4 bg-white text-leaf-900 px-6 py-3 rounded-full font-black text-sm hover:bg-leaf-50 transition-all shadow-md transform hover:scale-105 active:scale-95"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+            <span>@tangawisi.toulouse</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <section id="galerie" class="w-full max-w-6xl mx-auto mb-20 px-4">
+      <h3 class="text-center font-titan text-4xl text-stone-800 mb-10 tracking-wide">
+        L'UNIVERS TANGAWISI
+      </h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div
+          class="aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer group border-4 border-white"
+        >
+          <img
+            src="images/galerie-preparation.jpg"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            alt="Préparation artisanale"
+          />
+        </div>
+        <div
+          class="aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer group border-4 border-white"
+        >
+          <img
+            src="images/galerie-gingembre.jpg"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            alt="Gingembre frais"
+          />
+        </div>
+        <div
+          class="aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer group border-4 border-white"
+        >
+          <img
+            src="images/galerie-bouteille.jpg"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            alt="Le jus en bouteille"
+          />
+        </div>
+        <div
+          class="aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer group border-4 border-white"
+        >
+          <img
+            src="images/galerie-detail.jpg"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            alt="Détail du produit"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer class="w-full bg-stone-100 py-16 border-t border-stone-200">
+      <div class="max-w-4xl mx-auto text-center px-6">
+        <p class="font-titan text-2xl text-stone-400 mb-6 tracking-widest">
+          TANGAWISI TOULOUSE
+        </p>
+        <div class="text-xs text-stone-500 space-y-2 font-bold uppercase tracking-widest opacity-80">
+          <p>Japhet SITUMONANA • Micro-entreprise</p>
+          <p>414 route de Saint Simon, 31100 TOULOUSE</p>
+          <p class="pt-6 opacity-40">&copy; 2025 Tangawisi Toulouse. Site web artisanal.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
