@@ -1,5 +1,3 @@
-const formEndpoint = 'https://formspree.io/f/YOUR_ID_HERE';
-
 const form = document.getElementById('orderForm');
 const successMessage = document.getElementById('successMessage');
 const errorMessage = document.getElementById('errorMessage');
@@ -33,9 +31,11 @@ if (form) {
     const submitButton = form.querySelector('button[type="submit"]');
     const originalContent = submitButton.innerHTML;
 
-    if (formEndpoint.includes('YOUR_ID_HERE')) {
+    const formEndpoint = form.getAttribute('action');
+
+    if (!formEndpoint || formEndpoint.includes('YOUR_ID_HERE')) {
       alert(
-        "⚠️ Configuration requise : créez un formulaire sur Formspree.io et remplacez 'YOUR_ID_HERE' dans js/main.js."
+        "⚠️ Configuration requise : créez un formulaire sur Formspree.io et remplacez 'YOUR_ID_HERE' dans l'action du formulaire."
       );
       return;
     }
