@@ -33,9 +33,9 @@ if (form) {
     const submitButton = form.querySelector('button[type="submit"]');
     const originalContent = submitButton.innerHTML;
 
-    if (formEndpoint.includes('YOUR_ID_HERE')) {
+    if (formEndpoint.includes('japhet.situmonana@gmail.com')) {
       alert(
-        "⚠️ Configuration requise : créez un formulaire sur Formspree.io et remplacez 'YOUR_ID_HERE' dans js/main.js."
+        "⚠️ Configuration requise : créez un formulaire sur Formspree.io et remplacez 'japhet.situmonana@gmail.com' dans js/main.js."
       );
       return;
     }
