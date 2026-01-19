@@ -1,4 +1,4 @@
-const formEndpoint = 'https://formspree.io/f/YOUR_ID_HERE';
+const formEndpoint = 'https://formspree.io/f/japhet.situmonana@gmail.com';
 
 const form = document.getElementById('orderForm');
 const successMessage = document.getElementById('successMessage');
