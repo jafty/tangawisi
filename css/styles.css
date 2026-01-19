@@ -478,7 +478,6 @@ textarea:focus {
 }
 
 .delivery {
-  margin-top: 8px;
   padding: 20px 24px;
   background: var(--leaf-700);
   color: #fff;
@@ -509,10 +508,6 @@ textarea:focus {
   margin: 0;
   font-size: 14px;
   color: #dcfce7;
-}
-
-.delivery-wrapper {
-  padding: 0 0 8px;
 }
 
 .delivery-link {
