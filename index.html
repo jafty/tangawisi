@@ -53,13 +53,16 @@
 
         <form
           id="orderForm"
-          action="https://formspree.io/f/japhet.situmonana@gmail.com"
+          name="order"
           method="POST"
           class="order-form"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
         >
+          <input type="hidden" name="form-name" value="order" />
           <input
             type="text"
-            name="_gotcha"
+            name="bot-field"
             class="visually-hidden"
             tabindex="-1"
             autocomplete="off"
