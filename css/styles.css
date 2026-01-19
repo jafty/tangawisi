@@ -21,9 +21,13 @@ body {
   margin: 0;
   font-family: 'Outfit', sans-serif;
   color: var(--stone-900);
-  background-color: #fafafa;
-  background-image: radial-gradient(var(--ginger-300) 1px, transparent 1px);
-  background-size: 20px 20px;
+  background-color: var(--ginger-100);
+  background-image: radial-gradient(
+      rgba(255, 193, 7, 0.28) 1px,
+      transparent 1px
+    ),
+    linear-gradient(135deg, rgba(255, 193, 7, 0.18), rgba(255, 111, 0, 0.08));
+  background-size: 24px 24px, cover;
 }
 
 img {
@@ -287,6 +291,7 @@ textarea {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  margin-bottom: 12px;
 }
 
 .field-grid input {
@@ -473,7 +478,6 @@ textarea:focus {
 }
 
 .delivery {
-  margin-top: 8px;
   padding: 20px 24px;
   background: var(--leaf-700);
   color: #fff;
@@ -481,6 +485,7 @@ textarea:focus {
   flex-wrap: wrap;
   align-items: center;
   gap: 18px;
+  justify-content: space-between;
 }
 
 .delivery-icon {
@@ -503,12 +508,6 @@ textarea:focus {
   margin: 0;
   font-size: 14px;
   color: #dcfce7;
-}
-
-.delivery-divider {
-  flex: 1 1 40px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.3);
 }
 
 .delivery-link {
@@ -629,8 +628,4 @@ html {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .delivery-divider {
-    flex: 0 0 80px;
-    height: 48px;
-  }
 }
